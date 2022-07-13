@@ -1,7 +1,7 @@
 create table t 
   ( a int, 
     b varchar2(4000) default rpad('*',4000,'*'), 
-    c varchar2(3000) default rpad('*',3000,'*') 
+    c varchar2(4000) default rpad('*',4000,'*') 
    );
    
 insert into t (a) values ( 1); 
@@ -14,3 +14,5 @@ insert into t (a) values ( 4);
 commit; 
 
 SELECT a FROM t;
+
+DROP TABLE t;
